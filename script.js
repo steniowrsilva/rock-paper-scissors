@@ -15,7 +15,7 @@ function playRound(playerSelection, computerSelection){
     // returns a string that declares the winner of
     // the round like so: "You Lose! paper beats Rock".
     let player = playerSelection.toLowerCase();
-    
+
     if (player === "rock") {
         switch (computerSelection) {
             case "rock":
@@ -47,34 +47,49 @@ function playRound(playerSelection, computerSelection){
     
 }
 
+
 function game() {
 
     let winner = 0;
     let loser = 0;
     let tie = 0;
 
-    for (let i=0; i < 5; i++) {
-        const playerSelection = prompt("What is your choice?");
+    for (let i=1; i < 6; i++) {
+        let playerSelection = prompt("What is your choice?");
+        playerSelection = playerSelection.toLowerCase();
+        while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
+            playerSelection = prompt("Invalid Choice! What is your choice?");
+            playerSelection = playerSelection.toLowerCase();
+        }
+        
         const computerSelection = getComputerChoice();
 
         let result = playRound(playerSelection, computerSelection);
+        let message = "";
 
         switch (result) {
             case "You win!":
-                console.log(`You win! 
-                             ${playerSelection} beats ${computerSelection}`);
+                message = `You win!
+                            ${playerSelection} beats ${computerSelection}`;
+
+                document.getElementById("partial"+i).innerHTML=message;
+                console.log(message);
                 winner++;
             break;
 
             case "You lose!":
-                console.log(`You lose! 
-                            ${computerSelection} beats ${playerSelection}`);
+                message = `You lose!
+                            ${playerSelection} beats ${computerSelection}`
+                document.getElementById("partial"+i).innerHTML=message;
+                console.log(message);
                 loser++;
             break;
 
             default:
-                console.log(`Tie!
-                             both chose ${computerSelection}`);
+                message = `Tie!
+                            both chose ${computerSelection}!`
+                document.getElementById("partial"+i).innerHTML=message;
+                console.log(message);
                 tie++;
         }
 
@@ -82,16 +97,21 @@ function game() {
 
     if (tie%2 === 0) {
         if (winner>loser) {
+            document.getElementById("final").innerHTML="YOU ARE THE WINNER!!";
             console.log("YOU ARE THE WINNER!");
         } else {
+            document.getElementById("final").innerHTML="YOU ARE THE LOSER!!";
             console.log("YOU ARE THE LOSER!");
         }
     } else {
         if (winner>loser) {
+            document.getElementById("final").innerHTML="YOU ARE THE WINNER!!";
             console.log("YOU ARE THE WINNER!");
         } else if (winner<loser){
+            document.getElementById("final").innerHTML="YOU ARE THE LOSER!!";
             console.log("YOU ARE THE LOSER!");
         } else {
+            document.getElementById("final").innerHTML="TIE!";
             console.log("TIE!");
 
         }
