@@ -4,7 +4,7 @@ function getComputerChoice() {
 
     if (randomNumber < 3) {
         return "rock";
-    } else if ( randomNumber > 3 && randomNumber < 9) {
+    } else if ( randomNumber > 3 && randomNumber < 6) {
         return "paper";
     } else {
         return "scissors";
