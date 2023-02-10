@@ -55,10 +55,10 @@ function game() {
     let tie = 0;
 
     for (let i=1; i < 6; i++) {
-        let playerSelection = prompt("What is your choice?");
+        let playerSelection = prompt("Write 'rock', 'paper' or 'scissors");
         playerSelection = playerSelection.toLowerCase();
         while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
-            playerSelection = prompt("Invalid Choice! What is your choice?");
+            playerSelection = prompt("Invalid Choice! Write 'rock', 'paper' or 'scissors'!");
             playerSelection = playerSelection.toLowerCase();
         }
         
