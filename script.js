@@ -1,12 +1,12 @@
 function getComputerChoice() {
     // it'll return Rock, Paper or Scissors
-    let randomNumber = Math.floor(Math.random()*9);
+    let randomNumber = Math.random()*9;
 
     if (randomNumber < 3) {
         return "rock";
     } else if ( randomNumber > 3 && randomNumber < 6) {
         return "paper";
-    } else if (randomNumber > 6) {
+    } else {
         return "scissors";
     }
 }
