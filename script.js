@@ -60,6 +60,7 @@ function game() {
         while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
             playerSelection = prompt("Invalid Choice! Write 'rock', 'paper' or 'scissors'!");
             playerSelection = playerSelection.toLowerCase();
+            if (!playerSelection) break;
         }
         
         const computerSelection = getComputerChoice();
