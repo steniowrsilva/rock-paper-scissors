@@ -73,23 +73,23 @@ function game() {
                 message = `You win!
                             ${playerSelection} beats ${computerSelection}`;
 
-                document.getElementById("partial"+i).innerHTML=message;
+                
                 console.log(message);
                 winner++;
             break;
 
             case "You lose!":
                 message = `You lose!
-                            ${playerSelection} beats ${computerSelection}`
-                document.getElementById("partial"+i).innerHTML=message;
+                            ${playerSelection} beats ${computerSelection}`;
+                
                 console.log(message);
                 loser++;
             break;
 
             default:
                 message = `Tie!
-                            both chose ${computerSelection}!`
-                document.getElementById("partial"+i).innerHTML=message;
+                            both chose ${computerSelection}!`;
+
                 console.log(message);
                 tie++;
         }
@@ -98,21 +98,16 @@ function game() {
 
     if (tie%2 === 0) {
         if (winner>loser) {
-            document.getElementById("final").innerHTML="YOU ARE THE WINNER!!";
             console.log("YOU ARE THE WINNER!");
         } else {
-            document.getElementById("final").innerHTML="YOU ARE THE LOSER!!";
             console.log("YOU ARE THE LOSER!");
         }
     } else {
         if (winner>loser) {
-            document.getElementById("final").innerHTML="YOU ARE THE WINNER!!";
             console.log("YOU ARE THE WINNER!");
         } else if (winner<loser){
-            document.getElementById("final").innerHTML="YOU ARE THE LOSER!!";
             console.log("YOU ARE THE LOSER!");
         } else {
-            document.getElementById("final").innerHTML="TIE!";
             console.log("TIE!");
 
         }
