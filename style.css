@@ -25,6 +25,7 @@ body {
     font-size: medium;
     font-weight: bold;
     width:100px;
+    flex-shrink: 1;
 }
 
 #result {
