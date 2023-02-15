@@ -8,27 +8,52 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <button id="rock">rock</button><button id="paper">paper</button><button id="scissors">scissors</button>
- <!-- <script src="script.js"></script> -->
- <h3>result</h3>
- <div id="result">
 
-    <div id="playerScore">Player:</div>
-    <div id="player"></div>
-    
+<div id="langButtons">
+<!-- <button id="english" class="language">English</button> -->
+<button id="portuguese" class="language">Português</button>
+</div>
 
-    <div id="computerScore">Computer:</div>
-    <div id="computer"></div>
+<div id="game">
 
-    <div id="tieScore">Tie:</div>
-    <div id="tie"></div>
+    <h1>Let's play rock, paper and scissors</h1>
 
-    <div id="gameMessage">Game:</div>
-    <div id="message"></div>
+    <div id="gameButtons">
+        <button id="rock" class="gameButton">rock</button>
+        <button id="paper" class="gameButton">paper</button>
+        <button id="scissors" class="gameButton">scissors</button>
+    </div>
 
-    <div id="finalScore">FINAL RESULT:</div>
-    <div id="final"></div>
- </div>
+    <h3>Result</h3>
+    <div id="result">
+       <div id="score">
+
+            <div class="results">
+                <div id="playerScore">Player:</div>
+                <div id="player">0</div>
+            </div>
+
+            <div class="results">
+                <div id="computerScore">Computer:</div>
+                <div id="computer">0</div>
+            </div>
+
+            <div class="results">
+                <div id="tieScore">Tie:</div>
+                <div id="tie">0</div>
+            </div>
+
+        </div>
+
+       <div id="gameMessage">GAME:</div>
+       <div id="message"></div>
+
+       <div id="finalScore">FINAL RESULT:</div>
+       <div id="final"></div>
+    </div>
+</div>
+
 </body>
 </html>

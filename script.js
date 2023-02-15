@@ -126,4 +126,33 @@ scissors.addEventListener("click", function(){
     }
 });
 
+let portuguese = document.querySelector('#portuguese');
+let english = document.querySelector('#english');
+
+portuguese.addEventListener('click', () => {
+    let h1 = document.querySelector('h1');
+    h1.textContent = "Vamos Jogar Pedra, Papel e Tesoura";
+
+    rock.textContent = "Pedra";
+    paper.textContent = "Papel";
+    scissors.textContent = "Tesoura";
+
+    let h3 = document.querySelector('h3');
+    h3.textContent = "Resultado:"
+
+    let playerText = document.querySelector('#playerScore');
+    playerText.textContent = 'Jogador: ';
+    let computerText = document.querySelector('#computerScore');
+    computerText.textContent = 'Computador: ';
+    let tieText = document.querySelector('#tieScore');
+    tieText.textContent = 'Empate: ';
+
+    let gameMessage = document.querySelector('#gameMessage');
+    gameMessage.textContent = "JOGO:"
+    let finalScore = document.querySelector('#finalScore');
+    finalScore.textContent = "RESULTADO FINAL:"
+
+
+})
+
 

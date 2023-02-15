@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+#langButtons {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: auto;
+}
+
+#game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameButton {
+    padding: 8px 16px;
+    background-color: rgb(215, 117, 117);
+    color: white;   
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bold;
+    width:100px;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score {
+    border: 1px solid black;
+    display: flex;  
+    width: 300px;
+    height: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 16px;
+}
+
+.results {
+    display: flex;
+    gap: 5px;
+}
+
+#message, #final {
+    color: red;
+    font-size: large;
+    height: 25px;
+}
