@@ -19,6 +19,7 @@ body {
 
 #gameButtons {
     display: flex;
+    gap: 8px;
 }
 .gameButton {
     padding: 8px 16px;
