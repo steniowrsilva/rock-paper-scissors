@@ -17,7 +17,7 @@ body {
     align-items: center;
 }
 
-.gameButtons {
+#gameButtons {
     display: flex;
 }
 .gameButton {
